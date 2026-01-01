@@ -34,7 +34,7 @@ const techData = [
 
 export default function Technology() {
   return (
-    <div>
+    <div className="mt-40">
         <BlogNavbar></BlogNavbar>
         <div className="container  mx-auto px-22 py-10">
       {/* Section Title */}

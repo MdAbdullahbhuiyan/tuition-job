@@ -12,7 +12,7 @@ const Home = async () => {
     const session = await getServerSession()
     return (
         <div>
-            <div className='mt-35'>
+            <div className='mt-40'>
 
                 <div className=''>
                     {session ?
@@ -27,7 +27,7 @@ const Home = async () => {
                             <ServingCategory></ServingCategory>
 
                         </div> :
-                        <h1 className='flex justify-center text-3xl font-bold my-10'>You Are Not Sign In</h1>
+                        <h1 className='flex justify-center text-3xl font-bold my-10  text-red-700'>You Are Not Sign In</h1>
                     }
                 </div>
 

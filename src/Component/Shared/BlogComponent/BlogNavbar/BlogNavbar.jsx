@@ -3,6 +3,8 @@ import { useState } from "react";
 import Link from "next/link";
 import { FiChevronDown } from "react-icons/fi";
 import { FaSearch } from "react-icons/fa";
+import Image from "next/image";
+import logo2 from "../../../../../public/logo2.png"
 
 export default function BlogNavbar() {
   const [open, setOpen] = useState(false)
@@ -20,15 +22,13 @@ export default function BlogNavbar() {
         <div className=" border-b pb-3 ">
       {/* Top Row (Logo + Search) */}
       <div className="flex justify-between items-center py-4">
-        <img
-          src="https://cdn-caretutors.sgp1.cdn.digitaloceanspaces.com/assets/img/logo/logo.png"
+        
+       <Image   src={logo2}
           alt="logo"
-          width={48}
-          height={20}
-          
-          className="w-48"
-        />
-
+          width={100}
+          height={80}
+          className="rounded-2xl"
+          ></Image>
         <div className="border rounded-full p-2 cursor-pointer">
           <FaSearch size={18} />
         </div>

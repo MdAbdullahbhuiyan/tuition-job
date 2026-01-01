@@ -14,6 +14,7 @@ const nextConfig = {
         protocol: "https",
         hostname: "cdn-caretutors.sgp1.cdn.digitaloceanspaces.com",
       }
+      
     ],
   },
   reactCompiler: true,

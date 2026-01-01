@@ -9,7 +9,8 @@ import { SlCalender } from "react-icons/sl";
 
 
 
-export default function TuitionFilter() {
+
+const TuitionFilter = () => {
   const [categorydata, setCategorydata] = useState([]);
   const [categories, setCategories] = useState(null);
 
@@ -52,9 +53,12 @@ export default function TuitionFilter() {
   }, [selectedType, selectedSubject, selectedLocation, categorydata]);
 
   if (!categories) return <p className="p-6">Loading...</p>;
-
+  
   return (
-    <div className="grid grid-cols-1 md:grid-cols-4 gap-4 p-6 mt-30">
+    <div className=" mt-10">
+      
+        
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-4 p-6">
       {/* Filters */}
       <div className="col-span-1 space-y-4 bg-white shadow p-4 rounded-xl">
         <h2 className="text-xl font-semibold">Filter</h2>
@@ -129,5 +133,9 @@ export default function TuitionFilter() {
         )}
       </div>
     </div>
+   
+      
+    </div>
   );
 }
+export default TuitionFilter;

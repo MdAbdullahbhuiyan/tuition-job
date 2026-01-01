@@ -1,28 +1,66 @@
 "use client";
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
+
+import img1 from "../../../../../public/0001.png"
+import img2 from "../../../../../public/0002.png"
+import img3 from "../../../../../public/0003.png"
+import img4 from "../../../../../public/0004.png"
+import img5 from "../../../../../public/0005.png"
 
 const RegisterTutor = () => {
   const [showPass, setShowPass] = useState(false);
   const [showConfirmPass, setShowConfirmPass] = useState(false);
+  const [current, setCurrent] = useState(0);
+
+  const images = [img1, img2, img3, img4, img5];
+
+  // auto carousel
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrent((prev) => (prev + 1) % images.length);
+    }, 3000);
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <div className="w-full py-16 px-4 bg-[#F4F7FF]">
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
 
-        {/* Left Image */}
-        <div className="flex justify-center">
-          <Image
-            src="/registerTutor.png" 
-            alt="Register Tutor Illustration"
-            width={420}
-            height={420}
-            className="object-contain"
-          />
+        {/* LEFT IMAGE CAROUSEL */}
+        <div className="flex flex-col items-center justify-center">
+          <div
+            className="
+              relative 
+              w-[260px] h-[260px]
+              sm:w-[320px] sm:h-[320px]
+              lg:w-[420px] lg:h-[420px]
+            "
+          >
+            <Image
+              src={images[current]}
+              alt="Register Tutor Illustration"
+              fill
+              className="object-contain transition-all duration-500"
+            />
+          </div>
+
+          {/* dots */}
+          <div className="flex gap-2 mt-4">
+            {images.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setCurrent(index)}
+                className={`w-3 h-3 rounded-full transition ${
+                  current === index ? "bg-blue-600" : "bg-gray-300"
+                }`}
+              ></button>
+            ))}
+          </div>
         </div>
 
-        {/* Right Form */}
+        {/* RIGHT FORM (UNCHANGED) */}
         <div className="bg-white shadow-md rounded-xl p-8">
           <h2 className="text-2xl font-semibold text-[#1C2A53] mb-1">
             Register as a Tutor
@@ -128,7 +166,7 @@ const RegisterTutor = () => {
               </button>
             </div>
 
-            {/* Agree Checkbox */}
+            {/* Agree */}
             <div className="col-span-2 flex items-center gap-2 mt-2">
               <input type="checkbox" />
               <p className="text-sm">

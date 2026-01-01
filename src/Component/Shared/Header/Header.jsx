@@ -2,10 +2,12 @@
 import Image from "next/image";
 import Link from "next/link";
 import { IoIosCall } from "react-icons/io";
+import logo from "../../../../public/logo2.png"
+
 export default function Header() {
   return (
    <div>
-     <div className='bg-[#0675C1] flex gap-1 fixed top-0 px-22 py-2 items-center z-100 container mx-aut0 text-white'><IoIosCall /> 01576562801</div>
+     <div className='bg-[#0675C1] flex gap-1 fixed top-0 px-22 py-2 z-100 items-center  w-full text-white'><IoIosCall /> 01576562801</div>
     <header className="w-full bg-[#F7F8FC] py-4 shadow-sm fixed top-10 z-100">
 
       <div className="max-w-screen-xl mx-auto px-4 flex items-center justify-between">
@@ -13,10 +15,11 @@ export default function Header() {
         {/* Logo */}
         <Link href="/" className="flex items-center gap-3">
           <Image
-            src="/logo.png"   // ← তোমার logo.png public ফোল্ডারে রাখবে
+            src={logo}   // ← তোমার logo.png public ফোল্ডারে রাখবে
             alt="Caretutors Logo"
             width={190}
             height={50}
+            className="rounded-2xl"
           />
         </Link>
 
@@ -33,6 +36,9 @@ export default function Header() {
           </Link>
           <Link href="/blog" className="hover:text-blue-600 transition">
             Blog
+          </Link>
+          <Link href="/admin" className="hover:text-blue-600 transition">
+            Dashboard
           </Link>
         </nav>
 

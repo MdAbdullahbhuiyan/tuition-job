@@ -4,6 +4,7 @@ import baner1 from '../../../../../public/01.png'
 import baner2 from '../../../../../public/02.png'
 import baner3 from '../../../../../public/04.png'
 import baner4 from '../../../../../public/05.png'
+import Link from "next/link";
 const HireSection = () => {
   return (
     <section className="w-full py-20">
@@ -20,15 +21,15 @@ const HireSection = () => {
           </p>
 
           <div className="mt-8">
-            <button className="bg-blue-600 text-white px-8 py-3 rounded-xl text-lg font-medium hover:bg-blue-700 transition">
+           <Link href={"/hire"}> <button className="bg-blue-600 text-white px-8 py-3 rounded-xl text-lg font-medium hover:bg-blue-700 transition">
               Hire a Tutor
-            </button>
+            </button></Link>
           </div>
 
           <p className="mt-5 text-gray-600 text-lg">
             Want to become a Tutor?{" "}
             <span className="text-blue-600 font-semibold cursor-pointer">
-              Sign Up
+              <Link href={"/becometutor"}> Sign Up</Link>
             </span>{" "}
             now
           </p>

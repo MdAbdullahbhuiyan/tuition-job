@@ -34,7 +34,7 @@ const studyData = [
 
 export default function StudyHacks() {
     return (
-        <div>
+        <div className="mt-40">
             <BlogNavbar></BlogNavbar>
             <div className="container  mx-auto px-22 py-10">
                 <h2 className="text-3xl font-bold mb-8">Study Hacks</h2>

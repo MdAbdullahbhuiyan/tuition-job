@@ -1,27 +1,57 @@
 @import "tailwindcss";
 
+/* =========================
+   CSS Variables (Light)
+========================= */
 :root {
   --background: #ffffff;
   --foreground: #171717;
+
+  --card: #ffffff;
+  --card-foreground: #171717;
+
+  --border: #e5e7eb;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-  --font-poppins: var(--font-poppins);
+/* =========================
+   CSS Variables (Dark)
+   🔥 class-based dark mode
+========================= */
+.dark {
+  --background: #0a0a0a;
+  --foreground: #ededed;
+
+  --card: #111827;
+  --card-foreground: #f9fafb;
+
+  --border: #374151;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* =========================
+   Base styles
+========================= */
+html,
+body {
+  height: 100%;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-poppins), Arial, Helvetica, sans-serif;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* =========================
+   Utility helpers (optional)
+========================= */
+.card {
+  background: var(--card);
+  color: var(--card-foreground);
+  border: 1px solid var(--border);
+  border-radius: 0.75rem;
+}
+
+.border-default {
+  border-color: var(--border);
 }

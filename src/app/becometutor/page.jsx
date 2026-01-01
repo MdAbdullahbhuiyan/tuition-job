@@ -3,7 +3,7 @@ import React from 'react';
 
 const Becometutor = () => {
     return (
-        <div className='mt-20'>
+        <div className='mt-30'>
             <RegisterTutor></RegisterTutor>
         </div>
     );

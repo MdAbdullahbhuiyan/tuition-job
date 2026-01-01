@@ -34,7 +34,7 @@ const careerData = [
 
 export default function Career() {
   return (
-   <div>
+   <div className="mt-40">
     <BlogNavbar></BlogNavbar>
      <div className="container px-22 mx-auto  py-10">
       {/* Section Title */}

@@ -70,7 +70,7 @@ export default function Academic() {
   ];
 
   return (
-   <div>
+   <div className="mt-40">
     <BlogNavbar></BlogNavbar>
      <div className="container px-22 mx-auto mt-10 mb-12">
       <h2 className="text-2xl font-bold mb-6">Academic</h2>

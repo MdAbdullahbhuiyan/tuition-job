@@ -14,7 +14,7 @@ const Details = async ({ params }) => {
     const responsive = await fetch(`http://localhost:5000/categorydata/${categorydata_id}`)
     const categorydata = await responsive.json()
     return (
-        <div className=' flex justify-center my-10 mt-30'>
+        <div className=' flex justify-center my-10 mt-40'>
             <div className='shadow-2xl px-15 py-8 rounded-2xl  space-y-6'>
                 <h1 className='text-3xl font-bold'>{categorydata.title}</h1>
                 <div className='grid grid-cols-2 gap-30 font-semibold opacity-55  items-center'>

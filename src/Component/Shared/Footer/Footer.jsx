@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
+import logo from "../../../../public/logo2.png";
 import { FaFacebook, FaInstagram, FaLinkedin, FaTiktok, FaYoutube } from "react-icons/fa";
 
 export default function Footer() {
@@ -12,9 +13,10 @@ export default function Footer() {
         <div>
           <div className="flex items-center gap-3 mb-4">
             <Image
-              src="/logo.png"
+            src={logo}
               width={180}
               height={50}
+              className="rounded-2xl"
               alt="Caretutors Logo"
             />
           </div>
